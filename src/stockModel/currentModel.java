@@ -1,15 +1,16 @@
 /**
- * Program Name: home.java
- * Purpose: Main interface
+ * Program Name: currentModel.java
+ * Purpose: put something here
  * Coder: Libo Chen
  * Date: Jul. 31, 2020
  */
+package stockModel;
 
 /**
  * @author Libo
  *
  */
-public class home
+public class currentModel
 {
 
 	/**
