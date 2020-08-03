@@ -4,7 +4,7 @@
  * Coder: Libo Chen
  * Date: Jul. 31, 2020
  */
-package stockModel;
+package moneyModel;
 
 /**
  * @author Libo
