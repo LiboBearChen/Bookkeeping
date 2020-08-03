@@ -12,5 +12,7 @@ package stockModel;
  */
 public class stockInModel
 {
-
+	private int id;
+	private String companyName, productName, productDimension, note;
+	private double price, totalPrica;
 }
