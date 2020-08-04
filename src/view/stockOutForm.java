@@ -6,11 +6,18 @@
  */
 package view;
 
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
 /**
  * @author Libo
  *
  */
-public class stockOutForm
+public class stockOutForm extends JFrame
 {
-
+	private JLabel titleLbl, companyNameLbl,productNameLbl,productDimensionLbl,priceLbl,totalPriceLbl;
+	private JTextField titleFld, companyNameFld,productNameFld,productDimensionFld,priceFld,totalPriceFld;
+	private JButton addBtn, clearBtn;
 }

@@ -16,6 +16,9 @@ public class stockModel
 	/**
 	 * @param args
 	 */
+	private String productName, produceDimension;
+	private double productQuantity; 
+	
 	public static void main(String[] args)
 	{
 		// TODO Auto-generated method stub
