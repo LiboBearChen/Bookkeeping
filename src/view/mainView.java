@@ -20,9 +20,14 @@ import javax.swing.UnsupportedLookAndFeelException;
  * @author Libo
  *
  */
-public class mainView extends JFrame
+
+
+
+public class MainView extends JFrame
 {
-	public mainView()
+	private InvoiceInForm invoiceInForm;
+	
+	public MainView()
 	{
 		super("BookKeeping");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -30,11 +35,13 @@ public class mainView extends JFrame
 		this.setLocationRelativeTo(null);
 		setResizable(false);
 
+		new InvoiceInForm();
+		
 		this.setVisible(true);
 	}
 	
 	public static void main(String[] args)
 	{
-		new mainView();
+		new MainView();
 	}
 }

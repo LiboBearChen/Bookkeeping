@@ -15,7 +15,7 @@ import javax.swing.JTextField;
  * @author Libo
  *
  */
-public class invoiceOutForm extends JFrame
+public class InvoiceOutForm extends JFrame
 {
 	private JLabel titleLbl, companyNameLbl,productNameLbl,productDimensionLbl,priceLbl,totalPriceLbl;
 	private JTextField titleFld, companyNameFld,productNameFld,productDimensionFld,priceFld,totalPriceFld;
