@@ -35,8 +35,8 @@ public class MainView extends JFrame
 		this.setLocationRelativeTo(null);
 		setResizable(false);
 
-		new InvoiceInForm();
-		
+		invoiceInForm=new InvoiceInForm();
+		add(invoiceInForm);
 		this.setVisible(true);
 	}
 	

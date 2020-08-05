@@ -24,6 +24,7 @@ public class InvoiceInForm extends JFrame
 	public InvoiceInForm()
 	{
 		titleFld=new JTextField();
+		add(titleFld);
 	}
 
 }
