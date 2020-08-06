@@ -11,20 +11,31 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+import javafx.application.Application;
+
 /**
  * @author Libo
  *
  */
-public class InvoiceInForm extends JFrame
+public class InvoiceInForm extends Application
 {
 	private JLabel titleLbl, companyNameLbl,productNameLbl,productDimensionLbl,priceLbl,totalPriceLbl;
 	private JTextField titleFld, companyNameFld,productNameFld,productDimensionFld,priceFld,totalPriceFld;
 	private JButton addBtn, clearBtn;
 	
-	public InvoiceInForm()
+	public void start(Stage myStage)
 	{
 		titleFld=new JTextField();
-		add(titleFld);
+
+
+		rootPane.setCenter(titleFld);
+
+		Scene myScene = new Scene(rootPane, 400, 200);
+
+		myStage.setScene(myScene);
+    myStage.setTitle("Bookkeeping");
+    
+    myStage.show();	
 	}
 
 }
