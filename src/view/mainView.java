@@ -6,14 +6,14 @@
  */
 package view;
 
-import java.awt.Dimension;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
-import javax.swing.JFrame;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
 
 /**
@@ -23,25 +23,43 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 
 
-public class MainView extends JFrame
+public class MainView extends Application
 {
 	private InvoiceInForm invoiceInForm;
+	Button btn;
 	
-	public MainView()
+	public void start(Stage myStage)
 	{
-		super("BookKeeping");
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setSize(1000, 500);
-		this.setLocationRelativeTo(null);
-		setResizable(false);
+		btn = new Button("InvoiceInForm");
+		btn.setOnAction(e-> buttonClicked() );
+		
 
-		invoiceInForm=new InvoiceInForm();
-		add(invoiceInForm);
-		this.setVisible(true);
+		BorderPane rootPane = new BorderPane();
+
+		rootPane.setCenter(btn);
+		
+		rootPane.setBottom(btnClose);
+
+		Scene myScene = new Scene(rootPane, 400, 200);
+
+		myStage.setScene(myScene);
+    myStage.setTitle("Bookkeeping");
+    
+    myStage.show();	
+		
 	}
+	
+	public void buttonClicked()
+	{
+		
+		invoiceInForm=new InvoiceInForm();
+	
+	}
+
+	
 	
 	public static void main(String[] args)
 	{
-		new MainView();
+		launch();
 	}
 }
