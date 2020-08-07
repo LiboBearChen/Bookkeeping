@@ -26,7 +26,7 @@ import javafx.stage.Stage;
 public class MainView extends Application
 {
 	private InvoiceInForm invoiceInForm;
-	Button btn;
+	private Button btn;
 	
 	public void start(Stage myStage)
 	{
@@ -37,8 +37,6 @@ public class MainView extends Application
 		BorderPane rootPane = new BorderPane();
 
 		rootPane.setCenter(btn);
-		
-		rootPane.setBottom(btnClose);
 
 		Scene myScene = new Scene(rootPane, 400, 200);
 
@@ -52,7 +50,7 @@ public class MainView extends Application
 	public void buttonClicked()
 	{
 		
-		invoiceInForm=new InvoiceInForm();
+		launch();
 	
 	}
 
