@@ -10,7 +10,7 @@ package customerModel;
  * @author Libo
  *
  */
-public class cutomerModel
+public class CutomerModel
 {
 
 	private String companyName;
