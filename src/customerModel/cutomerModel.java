@@ -6,19 +6,16 @@
  */
 package customerModel;
 
-/**
- * @author Libo
- *
- */
+import java.util.ArrayList;
+
+import moneyModel.DebtModel;
 public class CutomerModel
 {
 
 	private String companyName;
+	private ArrayList<DebtModel> debtList;
 	
-	public static void main(String[] args)
-	{
-		// TODO Auto-generated method stub
+	public CutomerModel()
 
-	}
 
 }
