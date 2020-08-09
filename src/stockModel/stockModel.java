@@ -10,7 +10,7 @@ package stockModel;
  * @author Libo
  *
  */
-public class stockModel
+public class StockModel
 {
 
 	private String productName, productDimension;
@@ -18,7 +18,7 @@ public class stockModel
   private double unitPrice, totalPrice;
   private String note;
   
-  public stockModel(String n, String d, double q, double up, double tp, String no)
+  public StockModel(String n, String d, double q, double up, double tp, String no)
   {
   	productName=n;
   	productDimension=d;
