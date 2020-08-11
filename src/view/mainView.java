@@ -50,7 +50,7 @@ public class MainView extends Application
 	public void buttonClicked()
 	{
 		
-		launch();
+		new StockForm();
 	
 	}
 
