@@ -16,19 +16,13 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 
-/**
- * @author Libo
- *
- */
-
-
 
 public class MainView extends Application
 {
 	private InvoiceInForm invoiceInForm;
 	private Button btn;
-	
-	public void start(Stage myStage)
+	Stage mainStage, stockFormStage, InvoiceFormStage;
+	public void start(Stage mainStage)
 	{
 		btn = new Button("InvoiceInForm");
 		btn.setOnAction(e-> buttonClicked() );
@@ -40,10 +34,10 @@ public class MainView extends Application
 
 		Scene myScene = new Scene(rootPane, 400, 200);
 
-		myStage.setScene(myScene);
-    myStage.setTitle("Bookkeeping");
+		mainStage.setScene(myScene);
+		mainStage.setTitle("Bookkeeping");
     
-    myStage.show();	
+		mainStage.show();	
 		
 	}
 	
