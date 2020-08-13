@@ -16,12 +16,14 @@ public class BankModel
 {
 	private double totalMoney;
 	private ArrayList<Payment> payInList, payOutList;
+	private String bankName;
 	
-	public BankModel(double tm, ArrayList<Payment> pil, ArrayList<Payment> pol)
+	public BankModel(double tm, ArrayList<Payment> pil, ArrayList<Payment> pol,String bn)
 	{
 		totalMoney=tm;
 		payInList=pil;
 		payOutList=pol;
+		bankName=bn;
 	}
 	
 	public void payIn(Payment p)

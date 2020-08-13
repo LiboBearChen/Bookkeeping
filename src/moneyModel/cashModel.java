@@ -6,20 +6,35 @@
  */
 package moneyModel;
 
+import java.util.ArrayList;
+
 /**
  * @author Libo
  *
  */
-public class cashModel
+public class CashModel
 {
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args)
+	private double totalMoney;
+	private ArrayList<Payment> payInList, payOutList;
+	
+	public CashModel(double tm, ArrayList<Payment> pil, ArrayList<Payment> pol)
 	{
-		// TODO Auto-generated method stub
+		totalMoney=tm;
+		payInList=pil;
+		payOutList=pol;
+	}
+	
+	public void payIn(Payment p)
+	{
+		totalMoney+=p.getMoney();
+		payInList.add(p);
+	}
 
+	public void payOut(Payment p)
+	{
+		totalMoney-=p.getMoney();
+		payInList.add(p);
 	}
 
 }

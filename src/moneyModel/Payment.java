@@ -7,6 +7,7 @@
 package moneyModel;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * @author Libo
@@ -15,12 +16,15 @@ import java.util.ArrayList;
 public class Payment
 {
 	private double money;
-	private String note;
+	private String note,customerName;
+	private Date date;
 	
-	public Payment(double m, String n)
+	public Payment(double m, String n, String cn, Date d)
 	{
 		money=m;
 		note=n;
+		customerName=cn;
+		date=d;
 	}
 
 	public void setMoney(double m)
@@ -31,6 +35,14 @@ public class Payment
 	{
 		note=n;
 	}
+	public void setCustomerName(String cn)
+	{
+		customerName=cn;
+	}
+	public void setDate(Date d)
+	{
+		date=d;
+	}
 	
 	public double getMoney()
 	{
@@ -39,5 +51,13 @@ public class Payment
 	public String getNote()
 	{
 		return note;
+	}
+	public String getCustomerName()
+	{
+		return customerName;
+	}
+	public Date getDate()
+	{
+		return date;
 	}
 }
