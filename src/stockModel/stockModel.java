@@ -5,14 +5,35 @@
  * Date: Jul. 31, 2020
  */
 package stockModel;
+import java.util.ArrayList;
 
+import productModel.ProductModel;;
 /**
  * @author Libo
  *
  */
 public class StockModel
 {
-	
+	private ArrayList<ProductModel> productList;
 
+	public StockModel(ArrayList<ProductModel> pl)
+	{
+		productList=pl;
+	}
+	
+	public void addProduct(ProductModel p)
+	{
+		productList.add(p);
+	}
+	
+	public void removeProduct(ProductModel p)
+	{
+		productList.remove(p);
+	}
+	
+	public ArrayList<ProductModel> getProductList()
+	{
+		return productList;
+	}
 
 }
