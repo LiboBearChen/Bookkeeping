@@ -14,11 +14,13 @@ public class CutomerModel
 
 	private String companyName;
 	private ArrayList<DebtModel> debtList;
+	private ArrayList<DealModel> dealList;
 	
-	public CutomerModel(String cn, ArrayList<DebtModel> dl)
+	public CutomerModel(String cn, ArrayList<DebtModel> dbl, ArrayList<DealModel> del)
 	{
 		companyName=cn;
-		debtList=dl;
+		debtList=dbl;
+		dealList=del;
 	}
 
 	public void setCompanyName(String cn)
@@ -29,6 +31,10 @@ public class CutomerModel
 	{
 		debtList=dl;
 	}
+	public void setDealList(ArrayList<DealModel> dl)
+	{
+		dealList=dl;
+	}
 	
 	public String getCompanyName()
 	{
@@ -37,5 +43,9 @@ public class CutomerModel
 	public ArrayList<DebtModel> getDebtList()
 	{
 		return debtList;
+	}
+	public ArrayList<DealModel> getDealList()
+	{
+		return dealList;
 	}
 }
