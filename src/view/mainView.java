@@ -13,6 +13,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 
@@ -20,20 +21,26 @@ import javafx.stage.Stage;
 public class MainView extends Application
 {
 	private InvoiceInForm invoiceInForm;
-	private Button btn;
+	private Button InvoiceBtn, StockBtn;
 	Stage mainStage, stockFormStage, InvoiceFormStage;
 	public void start(Stage mainStage)
 	{
-		btn = new Button("InvoiceInForm");
-		btn.setOnAction(e-> buttonClicked() );
+		HBox hBox = new HBox();
 		
+		InvoiceBtn = new Button("InvoiceForm");
+		InvoiceBtn.setOnAction(e-> buttonClicked() );
+		StockBtn = new Button("StockForm");
+		StockBtn.setOnAction(e-> buttonClicked() );
+		
+		hBox.getChildren().add(InvoiceBtn);
+		hBox.getChildren().add(StockBtn);
 
 		BorderPane rootPane = new BorderPane();
-
-		rootPane.setCenter(btn);
+		rootPane.getStyleClass().add("rootPane");
+		rootPane.setBottom(hBox);
 
 		Scene myScene = new Scene(rootPane, 400, 200);
-
+		myScene.getStylesheets().add("MainView.css");
 		mainStage.setScene(myScene);
 		mainStage.setTitle("Bookkeeping");
     
