@@ -1,0 +1,13 @@
+.button
+{
+	-fx-background-color: darkslateblue;
+	-fx-text-fill: white;
+}
+.text
+{
+	-fx-font: normal bold 20px 'serif';
+}
+.rootPane
+{
+	-fx-background-color: beige;
+}

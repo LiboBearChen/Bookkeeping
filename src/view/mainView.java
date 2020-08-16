@@ -23,15 +23,16 @@ public class MainView extends Application
 	private InvoiceInForm invoiceInForm;
 	private Button InvoiceBtn, StockBtn;
 	Stage mainStage, stockFormStage, InvoiceFormStage;
+	
 	public void start(Stage mainStage)
 	{
-		HBox hBox = new HBox();
-		
+				
 		InvoiceBtn = new Button("InvoiceForm");
 		InvoiceBtn.setOnAction(e-> buttonClicked() );
 		StockBtn = new Button("StockForm");
 		StockBtn.setOnAction(e-> buttonClicked() );
 		
+		HBox hBox = new HBox();
 		hBox.getChildren().add(InvoiceBtn);
 		hBox.getChildren().add(StockBtn);
 
@@ -41,9 +42,9 @@ public class MainView extends Application
 
 		Scene myScene = new Scene(rootPane, 400, 200);
 		myScene.getStylesheets().add("MainView.css");
+		
 		mainStage.setScene(myScene);
-		mainStage.setTitle("Bookkeeping");
-    
+		mainStage.setTitle("Bookkeeping");    
 		mainStage.show();	
 		
 	}
