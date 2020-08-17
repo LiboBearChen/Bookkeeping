@@ -6,6 +6,7 @@
  */
 package view;
 
+import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -18,11 +19,16 @@ import javafx.stage.Stage;
  * @author Libo
  *
  */
-public class InvoiceForm
+public class InvoiceForm extends Application
 {
 	private Label titleLbl, companyNameLbl,productNameLbl,productDimensionLbl,priceLbl,totalPriceLbl;
 	private TextField titleFld, companyNameFld,productNameFld,productDimensionFld,priceFld,totalPriceFld;
 	private Button addBtn, clearBtn, InvoiceInBtn, InvoiceOutBtn, ShowHistoryBtn;
+	
+	public void init()
+	{
+		//opening a connection to a database, or populating a ComboBox
+	}
 	
 	public void start(Stage myStage)
 	{
@@ -55,6 +61,11 @@ public class InvoiceForm
 		myStage.setTitle("Invoice Form");    
 		myStage.show();	
 	}
+	
+	public void stop()
+	{
+		//
+	}//end stop
 	
 	public static void main(String[] args)
 	{

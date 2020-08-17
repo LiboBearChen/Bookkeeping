@@ -11,6 +11,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -23,11 +24,16 @@ import javafx.stage.Stage;
  * @author Libo
  *
  */
-public class StockForm extends JFrame
+public class StockForm extends Application
 {
 	private Label titleLbl, companyNameLbl,productNameLbl,productDimensionLbl,priceLbl,totalPriceLbl;
 	private TextField titleFld, companyNameFld,productNameFld,productDimensionFld,priceFld,totalPriceFld;
 	private Button addBtn, clearBtn, StockInBtn, StockOutBtn, ShowHistoryBtn;
+	
+	public void init()
+	{
+		//opening a connection to a database, or populating a ComboBox
+	}
 	
 	public void start(Stage myStage)
 	{
@@ -60,6 +66,11 @@ public class StockForm extends JFrame
 		myStage.setTitle("Stock Form");    
 		myStage.show();	
 	}
+	
+	public void stop()
+	{
+		//
+	}//end stop
 	
 	public static void main(String[] args)
 	{

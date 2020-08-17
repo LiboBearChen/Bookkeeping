@@ -24,6 +24,11 @@ public class MainView extends Application
 	private Button InvoiceBtn, StockBtn;
 	Stage mainStage, stockFormStage, InvoiceFormStage;
 	
+	public void init()
+	{
+		//opening a connection to a database, or populating a ComboBox
+	}
+	
 	public void start(Stage mainStage)
 	{
 				
@@ -54,7 +59,10 @@ public class MainView extends Application
 		new StockForm();	
 	}
 
-	
+	public void stop()
+	{
+		//
+	}//end stop
 	
 	public static void main(String[] args)
 	{
