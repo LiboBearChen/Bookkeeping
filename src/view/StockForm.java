@@ -31,25 +31,34 @@ public class StockForm extends JFrame
 	
 	public void start(Stage myStage)
 	{
-		InvoiceBtn = new Button("InvoiceForm");
-		InvoiceBtn.setOnAction(e-> buttonClicked() );
-		StockBtn = new Button("StockForm");
-		StockBtn.setOnAction(e-> buttonClicked() );
+		addBtn = new Button("Add");
+		addBtn.setOnAction(e-> buttonClicked() );
+		clearBtn = new Button("Clear");
+		clearBtn.setOnAction(e-> buttonClicked() );
+		StockInBtn = new Button("Stock In");
+		StockInBtn.setOnAction(e-> buttonClicked() );
+		StockOutBtn = new Button("Stock Out");
+		StockOutBtn.setOnAction(e-> buttonClicked() );
+		ShowHistoryBtn = new Button("Show History");
+		ShowHistoryBtn.setOnAction(e-> buttonClicked() );
 		
 		HBox hBox = new HBox();
-		hBox.getChildren().add(InvoiceBtn);
-		hBox.getChildren().add(StockBtn);
-
+		hBox.getChildren().add(addBtn);
+		hBox.getChildren().add(clearBtn);
+		hBox.getChildren().add(StockInBtn);
+		hBox.getChildren().add(StockOutBtn);
+		hBox.getChildren().add(ShowHistoryBtn);
+		
 		BorderPane rootPane = new BorderPane();
 		rootPane.getStyleClass().add("rootPane");
 		rootPane.setBottom(hBox);
 
 		Scene myScene = new Scene(rootPane, 400, 200);
-		myScene.getStylesheets().add("MainView.css");
+		myScene.getStylesheets().add("StockForm.css");
 		
-		mainStage.setScene(myScene);
-		mainStage.setTitle("Bookkeeping");    
-		mainStage.show();	
+		myStage.setScene(myScene);
+		myStage.setTitle("Stock Form");    
+		myStage.show();	
 	}
 	
 	public static void main(String[] args)
