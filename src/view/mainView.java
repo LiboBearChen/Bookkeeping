@@ -50,10 +50,8 @@ public class MainView extends Application
 	}
 	
 	public void buttonClicked()
-	{
-		
-		new StockForm();
-	
+	{		
+		new StockForm();	
 	}
 
 	

@@ -16,6 +16,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 /**
@@ -30,15 +31,29 @@ public class StockForm extends JFrame
 	
 	public void start(Stage myStage)
 	{
+		InvoiceBtn = new Button("InvoiceForm");
+		InvoiceBtn.setOnAction(e-> buttonClicked() );
+		StockBtn = new Button("StockForm");
+		StockBtn.setOnAction(e-> buttonClicked() );
+		
+		HBox hBox = new HBox();
+		hBox.getChildren().add(InvoiceBtn);
+		hBox.getChildren().add(StockBtn);
+
 		BorderPane rootPane = new BorderPane();
-		titleFld=new TextField();
-		rootPane.setCenter(titleFld);
+		rootPane.getStyleClass().add("rootPane");
+		rootPane.setBottom(hBox);
 
 		Scene myScene = new Scene(rootPane, 400, 200);
-
-		myStage.setScene(myScene);
-    myStage.setTitle("StockForm");
-    
-    myStage.show();	
+		myScene.getStylesheets().add("MainView.css");
+		
+		mainStage.setScene(myScene);
+		mainStage.setTitle("Bookkeeping");    
+		mainStage.show();	
+	}
+	
+	public static void main(String[] args)
+	{
+		launch();
 	}
 }
