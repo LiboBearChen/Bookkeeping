@@ -49,11 +49,7 @@ public class StockForm extends Application
 		ShowHistoryBtn.setOnAction(e-> buttonClicked() );
 		
 		HBox hBox = new HBox();
-		hBox.getChildren().add(addBtn);
-		hBox.getChildren().add(clearBtn);
-		hBox.getChildren().add(StockInBtn);
-		hBox.getChildren().add(StockOutBtn);
-		hBox.getChildren().add(ShowHistoryBtn);
+		hBox.getChildren().addAll(addBtn, clearBtn, StockInBtn, StockOutBtn, ShowHistoryBtn);
 		
 		BorderPane rootPane = new BorderPane();
 		rootPane.getStyleClass().add("rootPane");

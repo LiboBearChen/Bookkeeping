@@ -38,8 +38,7 @@ public class MainView extends Application
 		StockBtn.setOnAction(e-> buttonClicked() );
 		
 		HBox hBox = new HBox();
-		hBox.getChildren().add(InvoiceBtn);
-		hBox.getChildren().add(StockBtn);
+		hBox.getChildren().addAll(InvoiceBtn, StockBtn);
 
 		BorderPane rootPane = new BorderPane();
 		rootPane.getStyleClass().add("rootPane");

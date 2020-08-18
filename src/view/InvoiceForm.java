@@ -7,6 +7,8 @@
 package view;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -32,23 +34,21 @@ public class InvoiceForm extends Application
 	
 	public void start(Stage myStage)
 	{
+		ButtonListener buttonListener = new ButtonListener();
+		
 		addBtn = new Button("Add");
-		addBtn.setOnAction(e-> buttonClicked() );
+		addBtn.setOnAction(buttonListener);
 		clearBtn = new Button("Clear");
-		clearBtn.setOnAction(e-> buttonClicked() );
+		clearBtn.setOnAction(buttonListener);
 		InvoiceInBtn = new Button("Invoice In");
-		InvoiceInBtn.setOnAction(e-> buttonClicked() );
+		InvoiceInBtn.setOnAction(buttonListener);
 		InvoiceOutBtn = new Button("Invoice Out");
-		InvoiceOutBtn.setOnAction(e-> buttonClicked() );
+		InvoiceOutBtn.setOnAction(buttonListener);
 		ShowHistoryBtn = new Button("Show History");
-		ShowHistoryBtn.setOnAction(e-> buttonClicked() );
+		ShowHistoryBtn.setOnAction(buttonListener);
 		
 		HBox hBox = new HBox();
-		hBox.getChildren().add(addBtn);
-		hBox.getChildren().add(clearBtn);
-		hBox.getChildren().add(StockInBtn);
-		hBox.getChildren().add(StockOutBtn);
-		hBox.getChildren().add(ShowHistoryBtn);
+		hBox.getChildren().addAll(addBtn,clearBtn,InvoiceInBtn, InvoiceOutBtn, ShowHistoryBtn);
 		
 		BorderPane rootPane = new BorderPane();
 		rootPane.getStyleClass().add("rootPane");
@@ -66,6 +66,36 @@ public class InvoiceForm extends Application
 	{
 		//
 	}//end stop
+	
+	private class ButtonListener implements EventHandler<ActionEvent>
+  {
+		@Override
+		public void handle(ActionEvent ev)
+		{
+
+			if(ev.getSource()== addBtn)
+			{
+
+			}
+			else if(ev.getSource() == clearBtn)
+			{
+
+			}
+			else if(ev.getSource() == InvoiceInBtn)
+			{
+
+			}
+			else if(ev.getSource() == InvoiceOutBtn)
+			{
+
+			}
+			else if(ev.getSource() == ShowHistoryBtn)
+			{
+
+			}
+			
+		}//end method
+  }//end
 	
 	public static void main(String[] args)
 	{
