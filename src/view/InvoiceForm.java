@@ -94,8 +94,8 @@ public class InvoiceForm extends Application
 
 			}
 			
-		}//end method
-  }//end
+		}
+  }
 	
 	public static void main(String[] args)
 	{

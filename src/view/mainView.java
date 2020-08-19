@@ -8,6 +8,8 @@ package view;
 
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -31,11 +33,12 @@ public class MainView extends Application
 	
 	public void start(Stage mainStage)
 	{
-				
+		ButtonListener buttonListener = new ButtonListener();
+		
 		InvoiceBtn = new Button("InvoiceForm");
-		InvoiceBtn.setOnAction(e-> buttonClicked() );
+		InvoiceBtn.setOnAction(buttonListener);
 		StockBtn = new Button("StockForm");
-		StockBtn.setOnAction(e-> buttonClicked() );
+		StockBtn.setOnAction(buttonListener);
 		
 		HBox hBox = new HBox();
 		hBox.getChildren().addAll(InvoiceBtn, StockBtn);
@@ -53,10 +56,22 @@ public class MainView extends Application
 		
 	}
 	
-	public void buttonClicked()
-	{		
-		new StockForm();	
-	}
+	private class ButtonListener implements EventHandler<ActionEvent>
+  {
+		@Override
+		public void handle(ActionEvent ev)
+		{
+
+			if(ev.getSource()== InvoiceBtn)
+			{
+
+			}
+			else if(ev.getSource() == StockBtn)
+			{
+
+			}	
+		}
+  }
 
 	public void stop()
 	{
