@@ -12,6 +12,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -19,6 +21,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+
 
 /**
  * @author Libo
@@ -37,16 +40,18 @@ public class StockForm extends Application
 	
 	public void start(Stage myStage)
 	{
+		ButtonListener buttonListener = new ButtonListener();
+		
 		addBtn = new Button("Add");
-		addBtn.setOnAction(e-> buttonClicked() );
+		addBtn.setOnAction(buttonListener);
 		clearBtn = new Button("Clear");
-		clearBtn.setOnAction(e-> buttonClicked() );
+		clearBtn.setOnAction(buttonListener);
 		StockInBtn = new Button("Stock In");
-		StockInBtn.setOnAction(e-> buttonClicked() );
+		StockInBtn.setOnAction(buttonListener);
 		StockOutBtn = new Button("Stock Out");
-		StockOutBtn.setOnAction(e-> buttonClicked() );
+		StockOutBtn.setOnAction(buttonListener);
 		ShowHistoryBtn = new Button("Show History");
-		ShowHistoryBtn.setOnAction(e-> buttonClicked() );
+		ShowHistoryBtn.setOnAction(buttonListener);
 		
 		HBox hBox = new HBox();
 		hBox.getChildren().addAll(addBtn, clearBtn, StockInBtn, StockOutBtn, ShowHistoryBtn);
@@ -67,6 +72,36 @@ public class StockForm extends Application
 	{
 		//
 	}//end stop
+	
+	private class ButtonListener implements EventHandler<ActionEvent>
+  {
+		@Override
+		public void handle(ActionEvent ev)
+		{
+
+			if(ev.getSource()== addBtn)
+			{
+
+			}
+			else if(ev.getSource() == clearBtn)
+			{
+
+			}
+			else if(ev.getSource() == StockInBtn)
+			{
+
+			}
+			else if(ev.getSource() == StockOutBtn)
+			{
+
+			}
+			else if(ev.getSource() == ShowHistoryBtn)
+			{
+
+			}
+			
+		}
+  }
 	
 	public static void main(String[] args)
 	{
