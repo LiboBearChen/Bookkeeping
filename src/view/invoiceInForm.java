@@ -12,12 +12,16 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+
 
 /**
  * @author Libo
@@ -29,18 +33,62 @@ public class InvoiceInForm extends Application
 	private TextField titleFld, companyNameFld,productNameFld,productDimensionFld,priceFld,totalPriceFld;
 	private Button addBtn, clearBtn;
 	
+	public void init()
+	{
+		//opening a connection to a database, or populating a ComboBox
+	}
+	
 	public void start(Stage myStage)
 	{
+		ButtonListener buttonListener = new ButtonListener();
+		
+		addBtn = new Button("Add");
+		addBtn.setOnAction(buttonListener);
+		clearBtn = new Button("Clear");
+		clearBtn.setOnAction(buttonListener);
+
+		
+		HBox hBox = new HBox();
+		hBox.getChildren().addAll(addBtn,clearBtn);
+		
 		BorderPane rootPane = new BorderPane();
-		titleFld=new TextField();
-		rootPane.setCenter(titleFld);
+		rootPane.getStyleClass().add("rootPane");
+		rootPane.setBottom(hBox);
 
 		Scene myScene = new Scene(rootPane, 400, 200);
-
+		myScene.getStylesheets().add("InvoiceForm.css");
+		
 		myStage.setScene(myScene);
-    myStage.setTitle("InvoiceInForm");
-    
-    myStage.show();	
+		myStage.setTitle("Invoice In Form");    
+		myStage.show();	
+	}
+	
+	public void stop()
+	{
+		//
+	}//end stop
+	
+	private class ButtonListener implements EventHandler<ActionEvent>
+  {
+		@Override
+		public void handle(ActionEvent ev)
+		{
+
+			if(ev.getSource()== addBtn)
+			{
+
+			}
+			else if(ev.getSource() == clearBtn)
+			{
+
+			}
+
+		}
+  }
+	
+	public static void main(String[] args)
+	{
+		launch();
 	}
 
 }
