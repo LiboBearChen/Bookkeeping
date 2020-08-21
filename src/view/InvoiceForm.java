@@ -6,6 +6,7 @@
  */
 package view;
 
+import database.DatabaseConnection;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -26,10 +27,12 @@ public class InvoiceForm extends Application
 	private Label titleLbl, companyNameLbl,productNameLbl,productDimensionLbl,priceLbl,totalPriceLbl;
 	private TextField titleFld, companyNameFld,productNameFld,productDimensionFld,priceFld,totalPriceFld;
 	private Button addBtn, clearBtn, InvoiceInBtn, InvoiceOutBtn, ShowHistoryBtn;
+	private DatabaseConnection dataConnect;
 	
 	public void init()
 	{
 		//opening a connection to a database, or populating a ComboBox
+		dataConnect = new DatabaseConnection();
 	}
 	
 	public void start(Stage myStage)
