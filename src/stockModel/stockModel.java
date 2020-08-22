@@ -5,9 +5,7 @@
  * Date: Jul. 31, 2020
  */
 package stockModel;
-import java.util.ArrayList;
-
-import productModel.ProductModel;;
+import java.util.ArrayList;;
 /**
  * @author Libo
  *

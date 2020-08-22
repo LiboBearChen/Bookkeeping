@@ -8,7 +8,7 @@ package customerModel;
 import java.util.ArrayList;
 
 import moneyModel.DebtModel;
-import productModel.ProductModel;
+import stockModel.ProductModel;
 /**
  * @author Libo
  *

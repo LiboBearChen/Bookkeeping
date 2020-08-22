@@ -4,7 +4,7 @@
  * Coder: Libo Chen
  * Date: Aug. 2, 2020
  */
-package productModel;
+package stockModel;
 
 /**
  * @author Libo
