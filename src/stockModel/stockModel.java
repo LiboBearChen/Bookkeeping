@@ -13,6 +13,11 @@ import java.util.ArrayList;;
 public class StockModel
 {
 	private ArrayList<ProductModel> productList;
+	
+	public StockModel()
+	{
+		productList=new ArrayList<ProductModel>();
+	}
 
 	public StockModel(ArrayList<ProductModel> pl)
 	{

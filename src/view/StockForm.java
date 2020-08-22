@@ -22,6 +22,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+import stockModel.ProductModel;
+import stockModel.StockModel;
 
 
 /**
@@ -34,11 +36,15 @@ public class StockForm extends Application
 	private TextField titleFld, companyNameFld,productNameFld,productDimensionFld,priceFld,totalPriceFld;
 	private Button addBtn, clearBtn, StockInBtn, StockOutBtn, ShowHistoryBtn;
 	private DatabaseConnection dataConnect;
+	private StockModel stockModel;
+	private ProductModel productModel;
 	
 	public void init()
 	{
 		//opening a connection to a database, or populating a ComboBox
 		dataConnect = new DatabaseConnection();
+		stockModel=new StockModel();
+		
 	}
 	
 	public void start(Stage myStage)
@@ -84,7 +90,9 @@ public class StockForm extends Application
 
 			if(ev.getSource()== addBtn)
 			{
-
+				productModel=new ProductModel();
+				
+				stockModel.addProduct(productModel);
 			}
 			else if(ev.getSource() == clearBtn)
 			{
