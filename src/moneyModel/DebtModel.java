@@ -14,6 +14,7 @@ public class DebtModel
 {
 	private double money;
 	private String note;
+	private enum String cash,bank;
 	
 	public DebtModel(double m, String n)
 	{

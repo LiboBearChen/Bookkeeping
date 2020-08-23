@@ -27,6 +27,7 @@ public class MainView extends Application
 	private Button InvoiceBtn, StockBtn;
 	Stage mainStage, stockFormStage, InvoiceFormStage;
 	private DatabaseConnection dataConnect;
+	private BorderPane rootPane, dashPane, infoPane;
 	
 	public void init()
 	{
@@ -46,7 +47,7 @@ public class MainView extends Application
 		HBox hBox = new HBox();
 		hBox.getChildren().addAll(InvoiceBtn, StockBtn);
 
-		BorderPane rootPane = new BorderPane();
+		rootPane = new BorderPane();
 		rootPane.getStyleClass().add("rootPane");
 		rootPane.setBottom(hBox);
 
