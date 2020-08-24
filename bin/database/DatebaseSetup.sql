@@ -2,9 +2,14 @@ create database if not exists BookkeepingDB;
 
 use BookkeepingDB;
 
+drop table if exists customers;
+drop table if exists banks;
+drop table if exists products;
+drop table if exists stock;
+drop table if exists employees;
 drop table if exists employees;
 
-CREATE TABLE `employees` (
+CREATE TABLE `customers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `last_name` varchar(64) DEFAULT NULL,
   `first_name` varchar(64) DEFAULT NULL,
@@ -15,3 +20,36 @@ CREATE TABLE `employees` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 INSERT INTO `employees` (`id`,`last_name`,`first_name`,`email`, `department`, `salary`) VALUES (1,'efe','rewr','ewrwer@gmail.com', 'wdw', 32432.00);
+
+CREATE TABLE `banks` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `last_name` varchar(64) DEFAULT NULL,
+  `first_name` varchar(64) DEFAULT NULL,
+  `email` varchar(64) DEFAULT NULL,
+  `department` varchar(64) DEFAULT NULL,
+  `salary` DECIMAL(10,2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `last_name` varchar(64) DEFAULT NULL,
+  `first_name` varchar(64) DEFAULT NULL,
+  `email` varchar(64) DEFAULT NULL,
+  `department` varchar(64) DEFAULT NULL,
+  `salary` DECIMAL(10,2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `stock` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `last_name` varchar(64) DEFAULT NULL,
+  `first_name` varchar(64) DEFAULT NULL,
+  `email` varchar(64) DEFAULT NULL,
+  `department` varchar(64) DEFAULT NULL,
+  `salary` DECIMAL(10,2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
