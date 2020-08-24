@@ -11,34 +11,29 @@ drop table if exists employees;
 
 CREATE TABLE `customers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `last_name` varchar(64) DEFAULT NULL,
-  `first_name` varchar(64) DEFAULT NULL,
-  `email` varchar(64) DEFAULT NULL,
-  `department` varchar(64) DEFAULT NULL,
-  `salary` DECIMAL(10,2) DEFAULT NULL,
+  `name` varchar(64) DEFAULT NULL,
+  `phone` varchar(64) DEFAULT NULL,
+  `money` DECIMAL(10,2) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-INSERT INTO `employees` (`id`,`last_name`,`first_name`,`email`, `department`, `salary`) VALUES (1,'efe','rewr','ewrwer@gmail.com', 'wdw', 32432.00);
+INSERT INTO `customers` (`id`,`name`,`phone`,`money`) VALUES (1,'efe','322112', 32432.00);
 
 CREATE TABLE `banks` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `last_name` varchar(64) DEFAULT NULL,
-  `first_name` varchar(64) DEFAULT NULL,
-  `email` varchar(64) DEFAULT NULL,
-  `department` varchar(64) DEFAULT NULL,
-  `salary` DECIMAL(10,2) DEFAULT NULL,
+  `name` varchar(64) DEFAULT NULL,
+  `money` DECIMAL(10,2) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 
 CREATE TABLE `products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `last_name` varchar(64) DEFAULT NULL,
-  `first_name` varchar(64) DEFAULT NULL,
-  `email` varchar(64) DEFAULT NULL,
-  `department` varchar(64) DEFAULT NULL,
-  `salary` DECIMAL(10,2) DEFAULT NULL,
+  `name` varchar(64) DEFAULT NULL,
+  `diemension` varchar(64) DEFAULT NULL,
+  `quantity` varchar(64) DEFAULT NULL,
+  `cost` DECIMAL(10,2) DEFAULT NULL,
+  `price` DECIMAL(10,2) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
